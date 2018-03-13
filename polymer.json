@@ -1,0 +1,33 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/lhm-app.html",
+  "fragments": [
+    "src/lhm-list.html",
+    "src/news-animal.html",
+    "src/news-path-warning.html",
+    "src/lazy-resources.html"
+  ],
+  "sources": [
+    "src/**/*",
+    "images/**/*",
+    "data/**/*"
+  ],
+  "extraDependencies": [
+    "manifest.json",
+    "bower_components/webcomponentsjs/*"
+  ],
+  "lint": {
+    "rules": ["polymer-2-hybrid"]
+  },
+  "builds": [
+    {
+      "preset": "es5-bundled"
+    },
+    {
+      "preset": "es6-unbundled"
+    },
+    {
+      "preset": "es6-bundled"
+    }
+  ]
+}
