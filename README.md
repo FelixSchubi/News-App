@@ -1,4 +1,4 @@
-# News App Case Study
+# News App Case Study    <img src="https://travis-ci.org/FelixSchubi/News-App.svg?branch=master" >
 
         //     - https://www.webcomponents.org/element/vaadin/vaadin-upload/demo/demo/index.html
 
