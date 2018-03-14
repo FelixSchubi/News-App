@@ -21,6 +21,7 @@
 
 ## Introduction to Structured Data
 <br/>
+-> https://search.google.com/structured-data/testing-tool
 
 https://developers.google.com/search/docs/guides/intro-structured-data<br/>
  -> zum besseren Versändnis
