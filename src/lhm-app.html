@@ -154,6 +154,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           loading="[[loading]]"
           offline="[[offline]]"
           failure="[[failure]]"></news-animal>
+      
+
+
+
+
       <!-- invalid top level paths -->
       <news-path-warning name="path-warning"></news-path-warning>
 
@@ -250,7 +255,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
         if (!page) {
           // set default route if route path is empty
-          this.set('route.path', 'list/mammalia');
+    
+    //      this.set('route.path', 'list/mammalia');
+    // zum Testen als 'Start' && Bei Klick auf 'LHM - ZOO '
+    this.set('route.path', 'observations/observations');
+    
           return;
         }
         this.page = page;
