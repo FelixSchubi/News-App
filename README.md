@@ -20,12 +20,19 @@
  
  
  # To Fix
+ 
+ 
+ # Fixed
  - Der Auswahl Container (wenn man runterscrollt) lädt etwas falsches beim Klick auf "Beobachtungen"
  
- 
- 
- 
- 
+ _computeURI(categoryName) {
+        if (categoryName === "observations") {
+          return '/' + 'observations/observations';
+        }
+        else {
+          return '/list/' + categoryName;
+        }
+      }
  
  
  
