@@ -1,0 +1,23 @@
+{
+  "name": "news-app",
+  "version": "1.0.0",
+  "description": "Polymer 2.0 App",
+  "main": "service-worker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelixSchubi/News-App.git"
+  },
+  "keywords": [
+    "Polymer",
+    "2"
+  ],
+  "author": "LHM A61",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FelixSchubi/News-App/issues"
+  },
+  "homepage": "https://github.com/FelixSchubi/News-App#readme"
+}
