@@ -19,6 +19,10 @@
   "lint": {
     "rules": ["polymer-2-hybrid"]
   },
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
   "builds": [
     {
       "preset": "es5-bundled"
