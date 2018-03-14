@@ -1,6 +1,6 @@
 # News App Case Study
 
-        - https://www.webcomponents.org/element/vaadin/vaadin-upload/demo/demo/index.html
+        //     - https://www.webcomponents.org/element/vaadin/vaadin-upload/demo/demo/index.html
 
 
 
@@ -25,6 +25,9 @@
 
 https://developers.google.com/search/docs/guides/intro-structured-data<br/>
  -> zum besseren Versändnis
+
+Test zum Teilen der Website auf "Google +"
+ - https://developers.google.com/+/web/share/
  
  
  # To Fix
