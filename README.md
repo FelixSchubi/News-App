@@ -13,10 +13,10 @@
     -> https://meowni.ca/posts/polymer-2-cheatsheet/    <br/><br/><br/><br/>
     
 <h1> Aktueller Stand ist <b><a href="https://github.com/FelixSchubi/News-App">hier</a></b> zu finden. </h1>
- Neue Kategorie mit dem Name "observations" wurde erstellt.
- - _updateDocumentTitle() Funktion wurde bearbeitet um den richtigen document Title zu erhalten!
- - news-list-featured-item.html muss verändert werden (evtl. mit Mixin's Arbeiten?)
- - App-Route so verändern, dass "animal" bei "observations" wegfällt
+ Neue Kategorie mit dem Name "observations" wurde erstellt.<br/>
+ - _updateDocumentTitle() Funktion wurde bearbeitet um den richtigen document Title zu erhalten!<br/>
+ - news-list-featured-item.html muss verändert werden (evtl. mit Mixin's Arbeiten?)<br/>
+ - App-Route so verändern, dass "animal" bei "observations" wegfällt<br/>
  
  
  
