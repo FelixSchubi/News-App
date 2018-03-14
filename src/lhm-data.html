@@ -31,6 +31,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     const dataPath = 'data/animals/';  // used e.g. in _fetch
     // comment: the category json objects uses the category.name as part of the file name
 
+
+
+
     class NewsData extends Polymer.Element {
 
       static get is() { return 'lhm-data'; }
@@ -67,6 +70,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           computed: '_computeAnimal(category.items, animalId)',
           notify: true
         },
+
+
 
         failure: {
           type: Boolean,
