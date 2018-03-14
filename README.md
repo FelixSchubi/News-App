@@ -12,12 +12,21 @@
     -> https://news-docs.polymer-project.org/docs/using.html    <br/>
     -> https://meowni.ca/posts/polymer-2-cheatsheet/    <br/><br/><br/><br/>
     
-<h1> Aktueller Stand ist <b><a href="https://github.com/FelixSchubi/News-App">hier</a></b> zu finden. </h1>
- Neue Kategorie mit dem Name "observations" wurde erstellt.<br/>
+<h1> Aktueller Stand ist <b><a href="https://github.com/FelixSchubi/News-App">hier</a></b> zu finden. </h1> 
+       
+       - git clone https://github.com/FelixSchubi/News-App/
+
+        - cd News-App
+
+         - polymer serve
+<br/>
+
+ Neue Kategorie mit dem Name "observations" wurde erstellt.
  - _updateDocumentTitle() Funktion wurde bearbeitet um den richtigen document Title zu erhalten!<br/>
  - news-list-featured-item.html muss verändert werden (evtl. mit Mixin's Arbeiten?)<br/>
  - App-Route so verändern, dass "animal" bei "observations" wegfällt<br/>
 <br/>
+
 
 ## Introduction to Structured Data
 <br/>
