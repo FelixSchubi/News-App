@@ -1,6 +1,6 @@
 # News App Case Study
 
-        - https://www.webcomponents.org/element/vaadin/vaadin-upload/demo/demo/index.html
+        //     - https://www.webcomponents.org/element/vaadin/vaadin-upload/demo/demo/index.html
 
 
 
