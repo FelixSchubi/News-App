@@ -264,15 +264,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <!-- !smallScreen: List of the categories -->
       <dom-if if="[[!smallScreen]]">
         <template>
-<!--           <iron-selector role="navigation" class="menu-list" selected="[[category.name]]"
+          <iron-selector role="navigation" class="menu-list" selected="[[category.name]]"
               attr-for-selected="name">
             <dom-repeat items="[[categories]]" as="category" initial-count="9">
               <template>
                 <a name="[[category.name]]" href="[[_computeURI(category.name)]]">[[category.title]]</a>
               </template>
             </dom-repeat>
-          </iron-selector> -->
-          <lhm-category-nav classSelector="menu-list" categories="[[categories]]" category="[[category]]"></lhm-category-nav>
+          </iron-selector>
+          <!-- <lhm-category-nav classSelector="menu-list" categories="[[categories]]" category="[[category]]"></lhm-category-nav> -->
         </template>
       </dom-if>
     </header>
@@ -296,8 +296,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <slot></slot>
           </div>
         </div>
-        <paper-icon-button href= icon="mail" aria-label="Send by mail"></paper-icon-button>
+        <!-- <paper-icon-button icon="mail" aria-label="Send by mail"></paper-icon-button> -->
+        <a href="https://github.com/FelixSchubi/News-App">
+          <paper-icon-button icon="mail"></paper-icon-button>
+            </a>
+            <a href="https://plus.google.com/share?url=https://github.com/FelixSchubi/News-App" >
         <paper-icon-button icon="share" aria-label="Share on social networks"></paper-icon-button>
+      </a>
+
+   
       </app-toolbar>
       <div class="sticky-nav-menu" shown$="[[drawerOpened]]">
         <iron-selector class="grid-container" role="navigation"
