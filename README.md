@@ -19,7 +19,8 @@
  - App-Route so verändern, dass "animal" bei "observations" wegfällt<br/>
  
  
- 
+ # To Fix
+ - Der Auswahl Container (wenn man runterscrollt) lädt etwas falsches beim Klick auf "Beobachtungen"
  
  
  
