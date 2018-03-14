@@ -17,6 +17,13 @@
  - _updateDocumentTitle() Funktion wurde bearbeitet um den richtigen document Title zu erhalten!<br/>
  - news-list-featured-item.html muss verändert werden (evtl. mit Mixin's Arbeiten?)<br/>
  - App-Route so verändern, dass "animal" bei "observations" wegfällt<br/>
+<br/>
+
+## Introduction to Structured Data
+<br/>
+
+https://developers.google.com/search/docs/guides/intro-structured-data<br/>
+ -> zum besseren Versändnis
  
  
  # To Fix
