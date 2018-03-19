@@ -14,7 +14,12 @@
     "iron-iconset-svg": "polymerelements/iron-iconset-svg#^2.0.0",
     "iron-pages": "polymerelements/iron-pages#^2.0.0",
     "iron-selector": "polymerelements/iron-selector#^2.0.0",
-    "paper-icon-button": "polymerelements/paper-icon-button#^2.0.0"
+    "paper-icon-button": "polymerelements/paper-icon-button#^2.0.0",
+    "vaadin-grid": "vaadin/vaadin-grid#^4.1.7",
+    "vaadin-date-picker": "vaadin/vaadin-date-picker#^2.0.7",
+    "paper-input": "PolymerElements/paper-input#^2.2.0",
+    "paper-button": "PolymerElements/paper-button#^2.1.0",
+    "app-storage": "PolymerElements/app-storage#^2.1.1"
   },
   "devDependencies": {
     "web-component-tester": "^6.0.0"

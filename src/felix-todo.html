@@ -1,0 +1,167 @@
+
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="/bower_components/vaadin-date-picker/vaadin-date-picker.html">
+<link rel="import" href="/bower_components/vaadin-grid/vaadin-grid.html">
+<link rel="import" href="/bower_components/app-storage/app-localstorage/app-localstorage-document.html">
+<link rel="import" href="/bower_components/paper-input/paper-input.html">
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
+
+<link rel="import" href="/bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror.html">
+<link rel="import" href="/bower_components/iron-ajax/iron-ajax.html">
+
+<!-- <link rel="import" href="/bower_components/app-storage/test/app-indexeddb-mirror/app-indexeddb-mirror.html"> -->
+
+
+<dom-module id="felix-todo">
+
+
+<template>
+
+<style>
+    
+    .form{
+        display: flex;
+    }
+    .form paper-inpput{
+        flex: 1;
+        margin-right: 10px;
+    }
+    .form vaadin-date-picker {
+        flex: 1;
+        width: 140px;
+    }
+    .form paper-button {
+        align-self: flex-end;
+    }
+</style>
+
+<div>
+
+        <!-- <paper-button on-tap="_test">BLOB </paper-button> -->
+
+    <!-- <paper-input type="file" label="Bild" id={{todoImg}}></paper-input> -->
+
+    <!-- <input type="file" name="file" id="todoImg" class="todoImg" /> -->
+
+<div class="form">
+    <paper-input label="Notiz" value="{{todo.task}}"></paper-input>
+
+    <vaadin-date-picker label="Datum" value="{{todo.date}}"></vaadin-date-picker>
+    <paper-button on-tap="_addTodo">Notiz Hinzufügen</paper-button>
+</div>
+
+
+
+
+
+<vaadin-grid items="{{todos}}">
+    <vaadin-grid-column>
+        <template class="header">Notiz</template>
+        <template>{{item.task}}</template>
+    </vaadin-grid-column>
+    <!-- <vaadin-grid-column>
+            <template class="header">Bild</template>
+            <template>{{item.bild}}</template>
+        </vaadin-grid-column> -->
+    <vaadin-grid-column>
+        <template class="header">Datum</template>
+        <template>{{item.date}}</template>
+    </vaadin-grid-column>
+</vaadin-grid>
+
+
+
+  <app-indexeddb-mirror
+      session="Felix-Todo Session"
+      key="todos"
+      data="{{todos}}"
+      persisted-data="{{persistedData}}">
+  </app-indexeddb-mirror> 
+
+
+
+    <paper-input type="file" id="tesImg"></paper-input>
+
+    <!-- <app-indexeddb-mirror id="indexeddb" key="cats" data="{{todo}}"
+     persisted-data="{{persistedData}}"></app-indexeddb-mirror>
+    <button type="button" name="button" on-click="populate">Populate data (liveData)</button>
+    <button type="button" name="button" on-click="readStore">read store</button> -->
+
+
+     <p>[[storeData]]</p>
+
+    <!-- 
+  <paper-input label="_tFunc" value="{{test}}"></paper-input> -->
+<paper-button on-tap="_getValue">Get Value</paper-button>
+
+<p id="demo"></p>
+</div>
+<!-- <paper-input type="text" id="fileName" placeholder="File" readonly></paper-input>
+<paper-button id="changePicture" class="changePicture">Upload Picture</paper-button> -->
+
+</template>
+<script>
+
+    
+
+class FelixTodo extends Polymer.Element {
+
+    static get is() { return 'felix-todo'; }
+
+
+static get properties(){
+    return {
+        todo: {
+            type: Object,
+            value: () => { return {} }
+        },
+        todos: {
+            type: Array,
+            value: () => []
+        },
+  
+       };
+};
+
+
+
+
+_addTodo(key, value) 
+{
+    if(this.todo.task != null)
+    {
+    this.push('todos', this.todo);
+    this.todo = {};
+    }
+    else{
+        console.log("nichts hinzugefügt");
+    };
+};
+
+
+readStore() {
+       var test= this.$.indexeddb.getStoredValue().then((r) => this.storeData = r);
+        console.log(test);
+        document.getElementById("demo").innerHTML = test;
+      
+      }
+
+
+
+_test(todoImg, image){
+
+    console.log(todoImg);
+
+    console.log(image);
+
+    var blob = document.getElementById("todoImg").src;
+
+    console.log(blob);
+}
+}
+ customElements.define(FelixTodo.is, FelixTodo);
+
+</script>
+
+</dom-module>

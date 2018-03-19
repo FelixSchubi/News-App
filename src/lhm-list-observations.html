@@ -11,10 +11,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../bower_components/app-route/app-route.html">
 <link rel="import" href="../bower_components/app-layout/app-grid/app-grid-style.html">
+<!-- <link rel="import" href="../bower_components/yo-image-master/yo-image.html"> -->
+
+
 
 <link rel="import" href="lhm-list-featured-item.html">
 <link rel="import" href="lhm-list-item.html">
 <link rel="import" href="news-side-list.html">
+<link rel="import" href="news-todo.html">
+
 
 <dom-module id="lhm-list-observations">
 
@@ -146,6 +151,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         route="[[route]]"
         pattern="/:category"
         data="{{routeData}}"></app-route>
+<!-- 
+!!!!
+ -->
+
+<news-todo></news-todo>
+
 
     <div class="container" fade-in$="[[!loading]]" hidden$="[[failure]]">
       <div class="content">
@@ -165,6 +176,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </ul>
 
         <h3>Opinions on observations</h3>
+
+      
         <ul class="opinions-grid fade-in">
           <dom-repeat items="[[_slice(category.items, 5)]]">
             <template>
@@ -192,68 +205,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         offline="[[offline]]"
         on-try-reconnect="_tryReconnect"></news-network-warning>
 
-  </template>
+      </template>
 
   <script>
 
-    
-
-    console.log("test");
-
-    // This works on all devices/browsers, and uses IndexedDBShim as a final fallback 
-    var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
-
-      // Open (or create) the database
-      var open = indexedDB.open("MyDatabase", 1);
-
-      // Create the schema
-      open.onupgradeneeded = function() {
-          var db = open.result;
-          var store = db.createObjectStore("MyObjectStore", {keyPath: "id"});
-          var index = store.createIndex("NameIndex", ["name.last", "name.first"]);
-      };
-
-      open.onsuccess = function() {
-          // Start a new transaction
-          var db = open.result;
-          var tx = db.transaction("MyObjectStore", "readwrite");
-          var store = tx.objectStore("MyObjectStore");
-          var index = store.index("NameIndex");
-
-          // Add some data
-          store.put({id: 12345, name: {first: "John", last: "Doe"}, age: 42});
-          store.put({id: 67890, name: {first: "Bob", last: "Smith"}, age: 35});
-          
-          // Query the data
-          var getJohn = store.get(12345);
-          var getBob = index.get(["Smith", "Bob"]);
-
-          getJohn.onsuccess = function() {
-              console.log(getJohn.result.name.first);  // => "John"
-          };
-
-          getBob.onsuccess = function() {
-              console.log(getBob.result.name.first);   // => "Bob"
-          };
-
-          // Close the db when the transaction is done
-          tx.oncomplete = function() {
-              db.close();
-          };
-      }
-
-  
-  
-  
-  
-  
-  
   
   
   
   class LhmLObervervations extends Polymer.Element {
 
       static get is() { return 'lhm-list-observations'; }
+
+
+
+
 
       static get properties() { return {
 
@@ -273,9 +238,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         routeData: Object,
 
-        loading: Boolean
+        loading: Boolean,
+
 
       }}
+
+
+
 
       connectedCallback() {
         super.connectedCallback();

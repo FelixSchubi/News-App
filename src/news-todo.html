@@ -1,0 +1,124 @@
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+
+
+<link rel="import" href="../bower_components/vaadin-date-picker/vaadin-date-picker.html">
+<link rel="import" href="../bower_components/vaadin-grid/vaadin-grid.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror.html">
+
+<dom-module id="news-todo">
+
+  <template>
+
+    <style>
+
+      :host {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        /* background-color: #ddd; */
+      }
+
+    .form{
+        display: flex;
+    }
+    .form paper-inpput{
+        flex: 1;
+        margin-right: 10px;
+    }
+    .form vaadin-date-picker {
+        flex: 1;
+        width: 140px;
+    }
+    .form paper-button {
+        align-self: flex-end;
+    }
+
+    </style>
+
+<h1>NewsTodo</h1>
+
+<div class="form">
+  <paper-input label="Notiz" value="{{todo.task}}"></paper-input>
+
+  <vaadin-date-picker label="Datum" value="{{todo.date}}"></vaadin-date-picker>
+  <paper-button on-tap="_addTodo">Notiz Hinzufügen</paper-button>
+</div>
+
+<vaadin-grid items="{{todos}}">
+  <vaadin-grid-column>
+      <template class="header">Notiz</template>
+      <template>{{item.task}}</template>
+  </vaadin-grid-column>
+  <!-- <vaadin-grid-column>
+          <template class="header">Bild</template>
+          <template>{{item.bild}}</template>
+      </vaadin-grid-column> -->
+  <vaadin-grid-column>
+      <template class="header">Datum</template>
+      <template>{{item.date}}</template>
+  </vaadin-grid-column>
+</vaadin-grid>
+
+
+
+<app-indexeddb-mirror
+  session="Felix-Todo Session"
+  key="todos"
+  data="{{todos}}"
+  persisted-data="{{persistedData}}">
+</app-indexeddb-mirror> 
+
+  </template>
+
+  <script>
+
+    class NewsTodo extends Polymer.Element {
+
+      static get is() { return 'news-todo'; }
+
+        static get properties(){
+        
+        return {
+          todo: {
+            type: Object,
+            value: () => { return {} }
+                 },
+        todos: {
+            type: Array,
+            value: () => []
+                 },
+        }
+        }
+
+
+  _addTodo(key, value) 
+{
+    if(this.todo.task != null)
+    {
+    this.push('todos', this.todo);
+    this.todo = {};
+    }
+    else{
+        console.log("nichts hinzugefügt");
+    };
+};
+
+readStore() {
+       var test= this.$.indexeddb.getStoredValue().then((r) => this.storeData = r);
+        console.log(test);
+        document.getElementById("demo").innerHTML = test;
+  
+    }
+}
+
+    customElements.define(NewsTodo.is, NewsTodo);
+
+  </script>
+
+</dom-module>
