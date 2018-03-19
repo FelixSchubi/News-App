@@ -10,7 +10,15 @@
 - Einarbeitung in die Struktur
 - "Mixin's" ? <br/>
     -> https://news-docs.polymer-project.org/docs/using.html    <br/>
-    -> https://meowni.ca/posts/polymer-2-cheatsheet/    <br/><br/><br/><br/>
+    -> https://meowni.ca/posts/polymer-2-cheatsheet/    <br/><br/>
+    
+### Doku
+
+- Besseres Verständnis zum Thema App-Route mit Anmerkungen: <b><a href="https://github.com/FelixSchubi/News-App/blob/master/Doku/App-Route-Notes">App-Route-Notes</a></b>
+ 
+ 
+    
+ <br/>
     
 <h1> Aktueller Stand ist <b><a href="https://github.com/FelixSchubi/News-App">hier</a></b> zu finden. </h1> 
        
