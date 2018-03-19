@@ -12,6 +12,8 @@
     -> https://news-docs.polymer-project.org/docs/using.html    <br/>
     -> https://meowni.ca/posts/polymer-2-cheatsheet/    <br/><br/>
     
+- https://github.com/michael-silva/yo-image // Input Image and Preview
+    
 ### Doku
 
 - Besseres Verständnis zum Thema App-Route mit Anmerkungen: <b><a href="https://github.com/FelixSchubi/News-App/blob/master/Doku/App-Route-Notes">App-Route-Notes</a></b>
