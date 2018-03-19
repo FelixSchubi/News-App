@@ -1,0 +1,30 @@
+{
+  "version": "0.0.7",
+  "name": "yo-paper-cropper",
+  "description": "An element to wrap Cropper.js",
+  "main": "yo-paper-cropper.html",
+  "license": "MIT",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "iron-image": "^2.1.2",
+    "cropperjs": "^1.2.2"
+  },
+  "devDependencies": {
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  },
+  "resolutions": {
+    "polymer": "^2.0.0"
+  },
+  "homepage": "https://github.com/michael-silva/yo-paper-cropper",
+  "_release": "0.0.7",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.7",
+    "commit": "6ba4b6909b2ca028cc124e7d7bb11c51d8b0c024"
+  },
+  "_source": "https://github.com/michael-silva/yo-paper-cropper.git",
+  "_target": "^0.0.7",
+  "_originalSource": "michael-silva/yo-paper-cropper"
+}

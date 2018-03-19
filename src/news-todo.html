@@ -8,6 +8,11 @@
 <link rel="import" href="../bower_components/paper-input/paper-input.html">
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror.html">
+<!-- <link rel="import" href="../bower_components/yo-image/yo-image.html"> -->
+
+<link rel="import" href="../bower_components/bwt-uploader/bwt-uploader.html">
+
+
 
 <dom-module id="news-todo">
 
@@ -45,6 +50,9 @@
 
 <div class="form">
   <paper-input label="Notiz" value="{{todo.task}}"></paper-input>
+  <!-- <yo-image></yo-image> -->
+
+  <bwt-uploader></bwt-uploader>
 
   <vaadin-date-picker label="Datum" value="{{todo.date}}"></vaadin-date-picker>
   <paper-button on-tap="_addTodo">Notiz Hinzufügen</paper-button>
@@ -93,6 +101,10 @@
             type: Array,
             value: () => []
                  },
+
+
+
+
         }
         }
 

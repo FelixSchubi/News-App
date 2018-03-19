@@ -1,0 +1,34 @@
+{
+  "name": "yo-image",
+  "version": "0.0.5",
+  "description": "A image input with upload and crop",
+  "main": "yo-image.html",
+  "license": "MIT",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "iron-image": "^2.1.2",
+    "paper-button": "^2.0.0",
+    "yo-file-uploader": "michael-silva/yo-file-uploader#^0.0.4",
+    "yo-paper-cropper": "michael-silva/yo-paper-cropper#^0.0.7",
+    "paper-dialog": "^2.0.1"
+  },
+  "devDependencies": {
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  },
+  "resolutions": {
+    "polymer": "^2.0.0"
+  },
+  "homepage": "https://github.com/michael-silva/yo-image",
+  "_release": "0.0.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.5",
+    "commit": "b5784ff299efafacda193a7e6254f6e830ae55db"
+  },
+  "_source": "https://github.com/michael-silva/yo-image.git",
+  "_target": "^0.0.5",
+  "_originalSource": "michael-silva/yo-image",
+  "_direct": true
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>yo-paper-cropper demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../yo-paper-cropper.html">
+
+    <custom-style>
+        <style is="custom-style" include="demo-pages-shared-styles">
+        </style>
+    </custom-style>
+</head>
+
+<body>
+    <div class="vertical-section-container centered">
+        <h3>Basic yo-paper-cropper demo</h3>
+        <demo-snippet>
+            <template>
+                <yo-paper-cropper src="https://images.pexels.com/photos/843256/pexels-photo-843256.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"></yo-paper-cropper>
+            </template>
+        </demo-snippet>
+    </div>
+    <div class="vertical-section-container centered">
+        <h3>Basic 2 yo-paper-cropper demo</h3>
+        <demo-snippet>
+            <template>
+                <yo-paper-cropper src="https://images.pexels.com/photos/428376/pexels-photo-428376.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"></yo-paper-cropper>
+            </template>
+        </demo-snippet>
+    </div>
+    <div class="vertical-section-container centered">
+        <h3>Passing options to yo-paper-cropper demo</h3>
+        <demo-snippet>
+            <template>
+                <yo-paper-cropper id="example3" src="https://images.pexels.com/photos/324658/pexels-photo-324658.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"></yo-paper-cropper>
+                <script>
+                    const cropper = document.querySelector('#example3');
+                    cropper.options = { dragMode: 'none', viewMode: 2,  cropBoxResizable: false, minCropBoxHeight: 100, minCropBoxWidth: 50 };
+                    cropper.addEventListener('image-loaded', e => {
+                        //if you discomment bellow line, the event cropper-ready dont trigger
+                        //e.preventDefault();
+                        console.log('image-ready');
+                    })
+                    cropper.addEventListener('cropper-ready', e => {
+                        console.log('cropper-ready');
+                    })
+                </script>
+            </template>
+        </demo-snippet>
+    </div>
+</body>
+
+</html>
