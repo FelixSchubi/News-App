@@ -21,7 +21,9 @@
     "paper-button": "PolymerElements/paper-button#^2.1.0",
     "app-storage": "PolymerElements/app-storage#^2.1.1",
     "yo-image": "michael-silva/yo-image#^0.0.5",
-    "bwt-uploader": "bluewatertracks/bwt-uploader#^0.9.13"
+    "bwt-uploader": "bluewatertracks/bwt-uploader#^0.9.13",
+    "app-pouchdb": "PolymerElements/app-pouchdb#^2.1.1",
+    "paper-fab": "PolymerElements/paper-fab#^2.1.0"
   },
   "devDependencies": {
     "web-component-tester": "^6.0.0"

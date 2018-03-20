@@ -19,6 +19,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="lhm-list-item.html">
 <link rel="import" href="news-side-list.html">
 <link rel="import" href="news-todo.html">
+<link rel="import" href="felix-todo.html">
+
 
 
 <dom-module id="lhm-list-observations">
@@ -153,9 +155,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         data="{{routeData}}"></app-route>
 <!-- 
 !!!!
+<felix-todo> </felix-todo>
  -->
-
 <news-todo></news-todo>
+
 
 
     <div class="container" fade-in$="[[!loading]]" hidden$="[[failure]]">
@@ -214,11 +217,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   class LhmLObervervations extends Polymer.Element {
 
-      static get is() { return 'lhm-list-observations'; }
-
-
-
-
+      static get is() { return 'lhm-list-observations';}
 
       static get properties() { return {
 

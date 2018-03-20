@@ -7,10 +7,10 @@
 <link rel="import" href="../bower_components/vaadin-grid/vaadin-grid.html">
 <link rel="import" href="../bower_components/paper-input/paper-input.html">
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
-<link rel="import" href="../bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror.html">
 <!-- <link rel="import" href="../bower_components/yo-image/yo-image.html"> -->
 
 <link rel="import" href="../bower_components/bwt-uploader/bwt-uploader.html">
+<link rel="import" href="../Felix-Todo/app-note-pouch-felix/note-app.html">
 
 
 
@@ -39,6 +39,7 @@
     .form vaadin-date-picker {
         flex: 1;
         width: 140px;
+        margin-left: 3%;
     }
     .form paper-button {
         align-self: flex-end;
@@ -53,34 +54,33 @@
   <!-- <yo-image></yo-image> -->
 
   <bwt-uploader></bwt-uploader>
-
+    <paper-input label="id" value="{{todo._id}}"></paper-input>
   <vaadin-date-picker label="Datum" value="{{todo.date}}"></vaadin-date-picker>
+
   <paper-button on-tap="_addTodo">Notiz Hinzufügen</paper-button>
 </div>
 
 <vaadin-grid items="{{todos}}">
   <vaadin-grid-column>
       <template class="header">Notiz</template>
-      <template>{{item.task}}</template>
+      <!-- <template>{{item.task}}</template> -->
+<template></template>
   </vaadin-grid-column>
   <!-- <vaadin-grid-column>
           <template class="header">Bild</template>
           <template>{{item.bild}}</template>
       </vaadin-grid-column> -->
+      <vaadin-grid-column>
+        <template class="header">_id</template>
+        <template>{{item._id}}</template>
+    </vaadin-grid-column>
   <vaadin-grid-column>
       <template class="header">Datum</template>
       <template>{{item.date}}</template>
   </vaadin-grid-column>
 </vaadin-grid>
 
-
-
-<app-indexeddb-mirror
-  session="Felix-Todo Session"
-  key="todos"
-  data="{{todos}}"
-  persisted-data="{{persistedData}}">
-</app-indexeddb-mirror> 
+<note-app></note-app>
 
   </template>
 
@@ -121,12 +121,6 @@
     };
 };
 
-readStore() {
-       var test= this.$.indexeddb.getStoredValue().then((r) => this.storeData = r);
-        console.log(test);
-        document.getElementById("demo").innerHTML = test;
-  
-    }
 }
 
     customElements.define(NewsTodo.is, NewsTodo);
