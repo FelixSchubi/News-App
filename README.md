@@ -13,6 +13,8 @@
     -> https://meowni.ca/posts/polymer-2-cheatsheet/    <br/><br/>
     
 - https://github.com/michael-silva/yo-image // Input Image and Preview
+- https://www.webcomponents.org/element/IngressoRapidoWebComponents/creative-photo-editor/demo/demo/index.html 
+        -> evtl. als "Spielerei mit einbauen?"
     
 ### Doku
 
