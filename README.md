@@ -37,6 +37,8 @@
  - _updateDocumentTitle() Funktion wurde bearbeitet um den richtigen document Title zu erhalten!<br/>
  - news-list-featured-item.html muss verändert werden (evtl. mit Mixin's Arbeiten?)<br/>
  - App-Route so verändern, dass "animal" bei "observations" wegfällt<br/>
+ 
+ - Möglichkeit über ein Inpput Feld ein Bild zu einem Artikel hinzuzufügen?!
 <br/>
 
 
