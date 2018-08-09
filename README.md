@@ -29,8 +29,10 @@
        - git clone https://github.com/FelixSchubi/News-App/
 
         - cd News-App
+        
+         - bower i
 
-         - polymer serve
+           - polymer serve --open
 <br/>
 
  Neue Kategorie mit dem Name "observations" wurde erstellt.
